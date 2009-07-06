@@ -119,9 +119,14 @@ module Webrat
     def check(label_text)
       locator = "webrat=#{label_text}"
       selenium.wait_for_element locator, :timeout_in_seconds => 5
-      selenium.click locator
+      selenium.check locator
     end
-    alias_method :uncheck, :check
+
+    def check(label_text)
+      locator = "webrat=#{label_text}"
+      selenium.wait_for_element locator, :timeout_in_seconds => 5
+      selenium.uncheck locator
+    end
 
     webrat_deprecate :checks, :check
 
