@@ -7,7 +7,7 @@ module Webrat
   class WebratError < StandardError
   end
 
-  VERSION = '0.4.4'
+  VERSION = '0.4.4.1'
 
   def self.require_xml
     if on_java?
