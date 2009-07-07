@@ -122,7 +122,7 @@ module Webrat
       selenium.check locator
     end
 
-    def check(label_text)
+    def uncheck(label_text)
       locator = "webrat=#{label_text}"
       selenium.wait_for_element locator, :timeout_in_seconds => 5
       selenium.uncheck locator
